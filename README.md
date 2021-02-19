@@ -2,6 +2,10 @@
    ![Xd](https://github.com/Computer-Programming-I-UIS/game-mellewaitt/blob/Me/Juego/about/Banner.png)
 
    _Colombia podría en está guerra estar peor o mejor, por que no evitar alguna de los dos._
+  
+  ## Autores
+   * Kevin Mauricio León Rodriguez -2192111
+   * Emmanuel Fernando Gómez Gil   -2192110
 
   ## _Descripción_
   
@@ -9,6 +13,10 @@
    un integrante del peloton de infanteria Hercules del ejercito colombiano, en  un momento de descuido 
    todo el peloton fue atacado de improvisto por varios aviones MIG-29 del ejercito de Venezuela, provocando 
    que el peloton se disolviera en plena selva, tu unica mision es sobrevivir y escapar._
+   
+   _El diseño de escenarios está inspirado en la saga Castlevania y Metroid, el diseño del personaje 
+   principal se basa en la armadura de Master Chieft de Halo, la mecanica de Shot and run se basa en la trilogia 
+   de Contra._ 
   
   ## Historia
    
@@ -21,6 +29,10 @@
    
   ## Funcionamiento
   
+   ***Debido funcionamiento***   
+   * Debe terner descargada la libreria Minim en processing.   
+   * Por lo menos 30 Mb de espacio libre en disco
+   
    ***Movimiento***
    * A: Movimiento a la izquierda.
    * D: Movimiento a la derecha.
