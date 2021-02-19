@@ -8,6 +8,7 @@
    * Emmanuel Fernando Gómez Gil   -2192110
 
   ## _Descripción_
+  ![Captura1](https://github.com/Computer-Programming-I-UIS/game-mellewaitt/blob/Me/Juego/about/Captura%201.png)
   
    _Juego de accion de plataformas con toques de MetroidVania, asumes el rol del soldado Roberto 
    un integrante del peloton de infanteria Hercules del ejercito colombiano, en  un momento de descuido 
@@ -34,6 +35,8 @@
    * Por lo menos 30 Mb de espacio libre en disco
    
    ***Movimiento***
+   
+   ![Captura2](https://github.com/Computer-Programming-I-UIS/game-mellewaitt/blob/Me/Juego/about/Captura%202.png)
    * A: Movimiento a la izquierda.
    * D: Movimiento a la derecha.
    * Espacio: Salto.
