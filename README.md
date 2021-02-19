@@ -1,4 +1,6 @@
 # Mallewait
+   ![Xd](https://github.com/Computer-Programming-I-UIS/game-mellewaitt/blob/Me/Juego/about/Banner.png)
+
    _Colombia podría en está guerra estar peor o mejor, por que no evitar alguna de los dos._
 
   ## _Descripción_
