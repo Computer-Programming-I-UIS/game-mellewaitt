@@ -73,7 +73,7 @@ class personajes{
           //Hasta que altura llego?
             //El doble o triple de la altura del personaje
         //No, entonces no puede elevarse o subir,
-    if(PosiP.y >= height/2 ){
+    if(PosiP.y >= height/2 + 32){
       Floor = true;
       multi = 0;
     } else {
