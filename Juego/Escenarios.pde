@@ -212,8 +212,7 @@ void sala(){
   for(int i = 0; i < 18; i++){
     for(int j = 0; j < 24; j++){
       switch(jugador.Cambiar()){
-        case 1:
-        
+        case 1:        
         switch(E1[i][j]){
           case 1:
           image(Cesped,32*j,32*i);
@@ -222,7 +221,7 @@ void sala(){
           image(Tierra,32*j,32*i);
           break;
           case 3:
-          image(Cesped,32*j,32*i);
+          primero.gen();
           break;
           case 4:
           image(Arbol1,32*j,32*i);
@@ -252,71 +251,283 @@ void sala(){
         */
         break;
         case 2:
-        if(E2[i][j] == 1){
+        switch(E2[i][j]){
+          case 1:
           image(Cesped,32*j,32*i);
-        } else if(E2[i][j] == 2){
+          break;
+          case 2:
           image(Tierra,32*j,32*i);
+          break;
+          case 3:
+          primero.gen();
+          break;
+          case 4:
+          image(Arbol1,32*j,32*i);
+          break;
+          case 5:
+          image(Arbol2,32*j,32*i);
+          break;
+          case 6:
+          image(Arbol3,32*j,32*i);
+          break;
+          case 7:
+          image(Arbusto1,32*j,32*i);
+          break;
+          case 8:
+          image(Arbusto2,32*j,32*i);
+          break;
+          case 9:
+          image(Arbusto3,32*j,32*i);
+          break;
         }
         break;
         case 3:
-        if(E3[i][j] == 1){
+        switch(E3[i][j]){
+          case 1:
           image(Cesped,32*j,32*i);
-        } else if(E3[i][j] == 2){
+          break;
+          case 2:
           image(Tierra,32*j,32*i);
-        }else if(E3[i][j] == 3){
+          break;
+          case 3:
           primero.gen();
+          break;
+          case 4:
+          image(Arbol1,32*j,32*i);
+          break;
+          case 5:
+          image(Arbol2,32*j,32*i);
+          break;
+          case 6:
+          image(Arbol3,32*j,32*i);
+          break;
+          case 7:
+          image(Arbusto1,32*j,32*i);
+          break;
+          case 8:
+          image(Arbusto2,32*j,32*i);
+          break;
+          case 9:
+          image(Arbusto3,32*j,32*i);
+          break;
         }
         break;
         case 4:
-        if(E4[i][j] == 1){
+        switch(E4[i][j]){
+          case 1:
           image(Cesped,32*j,32*i);
-        } else if(E4[i][j] == 2){
+          break;
+          case 2:
           image(Tierra,32*j,32*i);
+          break;
+          case 3:
+          primero.gen();
+          break;
+          case 4:
+          image(Arbol1,32*j,32*i);
+          break;
+          case 5:
+          image(Arbol2,32*j,32*i);
+          break;
+          case 6:
+          image(Arbol3,32*j,32*i);
+          break;
+          case 7:
+          image(Arbusto1,32*j,32*i);
+          break;
+          case 8:
+          image(Arbusto2,32*j,32*i);
+          break;
+          case 9:
+          image(Arbusto3,32*j,32*i);
+          break;
         }
         break;
         
         case 5:
-        if(E5[i][j] == 1){
+        switch(E5[i][j]){
+          case 1:
           image(Cesped,32*j,32*i);
-        } else if(E5[i][j] == 2){
+          break;
+          case 2:
           image(Tierra,32*j,32*i);
+          break;
+          case 3:
+          primero.gen();
+          break;
+          case 4:
+          image(Arbol1,32*j,32*i);
+          break;
+          case 5:
+          image(Arbol2,32*j,32*i);
+          break;
+          case 6:
+          image(Arbol3,32*j,32*i);
+          break;
+          case 7:
+          image(Arbusto1,32*j,32*i);
+          break;
+          case 8:
+          image(Arbusto2,32*j,32*i);
+          break;
+          case 9:
+          image(Arbusto3,32*j,32*i);
+          break;
         }
         break;
         case 6:
-        if(E6[i][j] == 1){
+        switch(E6[i][j]){
+          case 1:
           image(Cesped,32*j,32*i);
-        } else if(E6[i][j] == 2){
+          break;
+          case 2:
           image(Tierra,32*j,32*i);
+          break;
+          case 3:
+          primero.gen();
+          break;
+          case 4:
+          image(Arbol1,32*j,32*i);
+          break;
+          case 5:
+          image(Arbol2,32*j,32*i);
+          break;
+          case 6:
+          image(Arbol3,32*j,32*i);
+          break;
+          case 7:
+          image(Arbusto1,32*j,32*i);
+          break;
+          case 8:
+          image(Arbusto2,32*j,32*i);
+          break;
+          case 9:
+          image(Arbusto3,32*j,32*i);
+          break;
         }
         break;
         case 7:
-        if(E7[i][j] == 1){
+        switch(E7[i][j]){
+          case 1:
           image(Cesped,32*j,32*i);
-        } else if(E7[i][j] == 2){
+          break;
+          case 2:
           image(Tierra,32*j,32*i);
+          break;
+          case 3:
+          primero.gen();
+          break;
+          case 4:
+          image(Arbol1,32*j,32*i);
+          break;
+          case 5:
+          image(Arbol2,32*j,32*i);
+          break;
+          case 6:
+          image(Arbol3,32*j,32*i);
+          break;
+          case 7:
+          image(Arbusto1,32*j,32*i);
+          break;
+          case 8:
+          image(Arbusto2,32*j,32*i);
+          break;
+          case 9:
+          image(Arbusto3,32*j,32*i);
+          break;
         }
         break;
         case 8:
-        if(E8[i][j] == 1){
+        switch(E8[i][j]){
+          case 1:
           image(Cesped,32*j,32*i);
-        } else if(E8[i][j] == 2){
+          break;
+          case 2:
           image(Tierra,32*j,32*i);
+          break;
+          case 3:
+          primero.gen();
+          break;
+          case 4:
+          image(Arbol1,32*j,32*i);
+          break;
+          case 5:
+          image(Arbol2,32*j,32*i);
+          break;
+          case 6:
+          image(Arbol3,32*j,32*i);
+          break;
+          case 7:
+          image(Arbusto1,32*j,32*i);
+          break;
+          case 8:
+          image(Arbusto2,32*j,32*i);
+          break;
+          case 9:
+          image(Arbusto3,32*j,32*i);
+          break;
         }
         break;
         case 9:
-        if(E9[i][j] == 1){
+        switch(E9[i][j]){
+          case 1:
           image(Cesped,32*j,32*i);
-        } else if(E9[i][j] == 2){
+          break;
+          case 2:
           image(Tierra,32*j,32*i);
+          break;
+          case 3:
+          primero.gen();
+          break;
+          case 4:
+          image(Arbol1,32*j,32*i);
+          break;
+          case 5:
+          image(Arbol2,32*j,32*i);
+          break;
+          case 6:
+          image(Arbol3,32*j,32*i);
+          break;
+          case 7:
+          image(Arbusto1,32*j,32*i);
+          break;
+          case 8:
+          image(Arbusto2,32*j,32*i);
+          break;
+          case 9:
+          image(Arbusto3,32*j,32*i);
+          break;
         }
         break;
         case 10:
-        if(E10[i][j] == 1){
+        switch(E2[i][j]){
+          case 1:
           image(Cesped,32*j,32*i);
-        } else if(E10[i][j] == 2){
+          break;
+          case 2:
           image(Tierra,32*j,32*i);
-        } else if(E10[i][j] == 3){
+          break;
+          case 3:
           primero.gen();
+          break;
+          case 4:
+          image(Arbol1,32*j,32*i);
+          break;
+          case 5:
+          image(Arbol2,32*j,32*i);
+          break;
+          case 6:
+          image(Arbol3,32*j,32*i);
+          break;
+          case 7:
+          image(Arbusto1,32*j,32*i);
+          break;
+          case 8:
+          image(Arbusto2,32*j,32*i);
+          break;
+          case 9:
+          image(Arbusto3,32*j,32*i);
+          break;
         }
         break;
        

@@ -4,6 +4,8 @@ float y=0;
 int Sala = 1;
 PFont pixelFont;
 int Pantalla = 0;
+Boolean Pause = false; 
+float time = 0;
 
 void setup(){
   size(768,576);
@@ -22,6 +24,8 @@ void setup(){
   }
   balas = new ArrayList< disparo>();
   hostiles = new ArrayList<disparo>();
+}
+void stop(){
 }
 void draw(){
   background(0);

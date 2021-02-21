@@ -3,7 +3,7 @@ ArrayList <disparo> hostiles;
 //Clase disparo**********************************************************************************************
 class disparo{  
   PVector Posi= new PVector(2,2);
-  int y = 4;
+  int y = 6;
   int dir = 1; 
   boolean T;
   

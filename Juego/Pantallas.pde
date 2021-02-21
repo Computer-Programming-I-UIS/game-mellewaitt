@@ -7,6 +7,7 @@ void PantallaIn() {
   about.generador();
 }
 void GamePlay() {
+  
   image(fondo, x, 0);
   image(Ft, 0, 0);  
   jugador.generator();
@@ -59,78 +60,10 @@ void pantalla() {
   case 3://Pantalla de pause      
     break;    
   case 4://Pantalla acerca
-    acerca();
-    
+    acerca();    
     break;
   case 5:
+    Amuerte();
     break;
-  }
-}
-Botones jugar;
-Botones opciones;
-Botones fin;
-Botones about;
-Botones volver;
-
-class Botones {
-  int i;
-  float x = 192;
-  float y;
-
-  Botones(float tempy, int B) {
-    y = tempy;
-    i = B;
-  }
-  void generador() {
-    Imagen();
-    funcion();
-  }
-  void Imagen() {
-    switch(i) {
-    case 0:
-      textFont(pixelFont);
-      fill(0, 255, 232);
-      textSize(46);
-      textAlign(CENTER, CENTER);
-      text("Volver", x, y);
-      break;
-    case 1:
-      textFont(pixelFont);
-      fill(0, 255, 232);
-      textSize(46);
-      textAlign(CENTER, CENTER);
-      text("Jugar", x, y);
-      break;
-    case 2:
-      textFont(pixelFont);
-      fill(0, 255, 232);
-      textSize(46);
-      textAlign(CENTER, CENTER);
-      text("Opciones", x, y);
-      break;
-    case 3:
-      fill(255, 0, 0);
-      circle(x, y, 32); 
-      fill(255);
-      break;
-    case 4:
-      textFont(pixelFont);
-      fill(0, 255, 232);
-      textSize(46);
-      textAlign(CENTER, CENTER);
-      text("Acerca", x, y);
-      break;
-    }
-  }
-  boolean funcion() {
-    boolean reg = false;
-    if(mousePressed){
-      if (mouseX >= x - 40 && mouseX <= x + 40 && mouseY <= y + 20 && mouseY >= y-20 && mouseButton == LEFT) {
-        reg = true;
-      } else {
-        reg = false;
-      }
-    }
-    return reg;
   }
 }

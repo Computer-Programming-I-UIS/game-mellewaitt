@@ -6,6 +6,7 @@ class personajes{
   PVector PosiP = new PVector(4,4);
   PVector VelP = new PVector(5,4);
   boolean Der=false,Izq=false,Jump=false,Proud=false,Floor=true,Shot=false,VisionD=false,VisionI=false,Cambio =false;
+  int arma = 1;
   float x;
   float y;
   float z;
@@ -29,6 +30,7 @@ class personajes{
     display();
     Accion();
     vidad();
+    arma();
   }
   int vidad(){
     return vidas;
@@ -65,6 +67,25 @@ class personajes{
       break;
     }
     return PosiP.x;
+  }
+  void arma(){
+    switch(arma){
+      case 1:
+        if(VisionD){image(Arma1D,x,y);}
+        else if(VisionI){image(Arma1I,x,y);}
+        else{image(Arma1D,x,y);}
+      break;
+      case 2:
+        if(VisionD){image(Arma2D,x,y);}
+        else if(VisionI){image(Arma2I,x,y);}
+        else{image(Arma2D,x,y);}
+      break;
+      case 3:
+        if(VisionD){image(Arma3D,x,y);}
+        else if(VisionI){image(Arma3I,x,y);}
+        else{image(Arma3D,x,y);}
+      break;
+    }
   }
   float Accion(){
     //Quiero saltar pero no puedo seguir subiendo que hago?

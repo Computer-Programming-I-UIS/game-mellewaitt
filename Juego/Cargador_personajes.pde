@@ -14,7 +14,7 @@ void Creador(){
   }
 }
 void muerte(){
-  if(jugador.vidas == 0){
+  if(jugador.vidas <= 0){
     Pantalla = 0;
     jugador.salas = 1;
     jugador.vidas = 4;

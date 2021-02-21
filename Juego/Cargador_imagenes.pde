@@ -8,6 +8,7 @@ PImage Tierra;
 PImage acerca;
 PImage Sal_der;
 PImage Sal_izq;
+PImage Muerte;
 PImage EnLigDer;
 PImage EnLigIzq;
 PImage EnNorDer;
@@ -20,6 +21,12 @@ PImage Arbusto3;
 PImage Arbol1;
 PImage Arbol2;
 PImage Arbol3;
+PImage Arma1D;
+PImage Arma1I;
+PImage Arma2D;
+PImage Arma2I;
+PImage Arma3D;
+PImage Arma3I;
 void imagenes(){
   //Escenario
   fondo = loadImage("assets/Escenarios/Cielo.png");
@@ -37,6 +44,13 @@ void imagenes(){
   CamIzqu = loadImage("assets/Personaje/Prota(-1).png");
   Sal_der = loadImage("assets/Personaje/Prota-salto.png");
   Sal_izq = loadImage("assets/Personaje/Prota-salto(-1).png");
+  Arma1D = loadImage("assets/Personaje/Arma1.png");
+  Arma1I = loadImage("assets/Personaje/Arma1(-1).png");
+  Arma2D = loadImage("assets/Personaje/Arma2.png");
+  Arma2I = loadImage("assets/Personaje/Arma2(-1).png");
+  Arma3D = loadImage("assets/Personaje/Arma3.png");
+  Arma3I = loadImage("assets/Personaje/Arma3(-1).png");
+  Muerte = loadImage("assets/Personaje/MuerteProta.png");
   //Interfaz
   Hui = loadImage("assets/Hub.png");
   Pi = loadImage("assets/Muestra.png");
