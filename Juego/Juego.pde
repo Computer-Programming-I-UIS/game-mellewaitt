@@ -22,8 +22,8 @@ void setup(){
     cubos[i][j] = new cubo(0,0);
     }
   }
-  balas = new ArrayList< disparo>();
-  hostiles = new ArrayList<disparo>();
+  balas = new ArrayList< disparo>(1);
+  hostiles = new ArrayList<disparo>(5);
 }
 void stop(){
 }
