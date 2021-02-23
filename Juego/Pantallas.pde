@@ -5,6 +5,10 @@ void PantallaIn() {
   opciones.generador();
   fin.generador();
   about.generador();
+  PantallaIn.play();
+   Opciones.pause();
+   GamePlay.pause(); 
+   acercaM.pause();
 }
 void GamePlay() {
   
@@ -15,10 +19,16 @@ void GamePlay() {
   Hut();
   bam();
   muerte();
+  Opciones.pause();
+  PantallaIn.pause();
+  GamePlay.play();
 }
 void Opciones() {
   image(opcion, 0, 0);
   volver.generador();
+  Opciones.play();
+  PantallaIn.pause();
+  GamePlay.pause();
 }
 //Fin de las funciones
 
