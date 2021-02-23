@@ -28,6 +28,7 @@ void GamePlay() {
    Opciones.pause();
    GamePlay.play(); 
    acercaM.pause();
+
 }
 void Opciones() {
   image(opcion, 0, 0);
