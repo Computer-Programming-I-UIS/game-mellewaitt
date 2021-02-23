@@ -1,4 +1,5 @@
 //Inician controles del jugador
+int d=1;
 void keyPressed(){
   if(Pantalla == 1){
     switch(keyCode){
@@ -27,20 +28,6 @@ void keyPressed(){
       break;
       case 'j':
       case 'J':
-        switch(jugador.arma){
-          case 1:
-            balas.add(new disparo(jugador.PosiP.x, jugador.PosiP.y - 7,jugador.VisionD,jugador.VisionI));
-          break;
-          case 2: 
-            balas.add(new disparo(jugador.PosiP.x, jugador.PosiP.y - 10,jugador.VisionD,jugador.VisionI));
-            balas.add(new disparo(jugador.PosiP.x, jugador.PosiP.y - 7,jugador.VisionD,jugador.VisionI));
-            balas.add(new disparo(jugador.PosiP.x, jugador.PosiP.y - 4,jugador.VisionD,jugador.VisionI));
-          break;
-          case 3:
-            balas.add(new disparo(jugador.PosiP.x, jugador.PosiP.y - 7,jugador.VisionD,jugador.VisionI));
-            balas.add(new disparo(jugador.PosiP.x, jugador.PosiP.y,jugador.VisionD,jugador.VisionI));
-          break;
-        }
       break;
       case '1':
         jugador.arma = 1;
@@ -76,7 +63,17 @@ void keyReleased(){
     case 'j':
     case 'J':
     case '1':
-      
+      if(jugador.VisionD){d=1;}
+      else if(jugador.VisionI){d=-1;}
+      switch(jugador.arma){          
+          case 1:
+            balas.add(new disparo(jugador.PosiP.x+11*d, jugador.PosiP.y - 4,jugador.VisionD,jugador.VisionI));
+          case 2: 
+            balas.add(new disparo(jugador.PosiP.x+11*d, jugador.PosiP.y - 10,jugador.VisionD,jugador.VisionI));            
+          case 3:
+            balas.add(new disparo(jugador.PosiP.x+11*d, jugador.PosiP.y - 7,jugador.VisionD,jugador.VisionI));
+          break;
+        }
       
     break;
     }
@@ -148,5 +145,10 @@ class Botones {
       }
     }
     return reg;
+  }
+}
+void F(){
+  if(mouseX >= 20*32-12 && mouseX <= 20*32-12 +128 && mouseY <= 16*32-12+64 && mouseY >= 16*32-12 && mouseButton == LEFT){
+    Pantalla = 5;
   }
 }

@@ -101,7 +101,6 @@ class personajes{
       Floor = false;
       multi+=0.01;
     }
-    print(multi + " Fin");
 
     if(Jump){
       PosiP.y = PosiP.y + (gravedad*multi - VelP.y);
@@ -127,22 +126,24 @@ class personajes{
       case 'd':
       case 'D':
       case RIGHT:
-      if(Floor){image(CamDere,x,y);}
+      if(Floor && keyPressed){PMoveP();}
       else if(!Floor){image(Sal_der,x,y);}
+      else{copy(CamDere,0,0,44,64,(int)jugador.x,(int)jugador.y,44,64);}
       break;
       case 'a':
       case 'A':
       case LEFT:
-      if(Floor){image(CamIzqu,x,y);}
+      if(Floor && keyPressed){PMoveN();}
       else if(!Floor){image(Sal_izq,x,y);}
+      else {copy(CamIzqu,0,0,44,64,(int)jugador.x,(int)jugador.y,44,64);}
       break;
       case 'w':
       case 'W':
       if(Floor){//Cambio
         if(VisionD){  
-          image(CamDere,x,y);
+          copy(CamDere,0,0,44,64,(int)jugador.x,(int)jugador.y,44,64);
         } else if (VisionI){
-          image(CamIzqu,x,y);
+          copy(CamIzqu,0,0,44,64,(int)jugador.x,(int)jugador.y,44,64);
         }
       }
       else if(!Floor){
@@ -158,11 +159,11 @@ class personajes{
       default:
         if(Floor){
           if(VisionD){  
-            image(CamDere,x,y);
+            copy(CamDere,0,0,44,64,(int)jugador.x,(int)jugador.y,44,64);
           } else if (VisionI){
-            image(CamIzqu,x,y);
+            copy(CamIzqu,0,0,44,64,(int)jugador.x,(int)jugador.y,44,64);
           } else {
-            image(CamDere,x,y);
+            copy(CamDere,0,0,44,64,(int)jugador.x,(int)jugador.y,44,64);
           }
         }
         else if(!Floor){
@@ -170,6 +171,8 @@ class personajes{
           image(Sal_der,x,y);
           } else if (VisionI){
           image(Sal_izq,x,y);
+          } else {
+          image(Sal_der,x,y);
           }
         }
       break;

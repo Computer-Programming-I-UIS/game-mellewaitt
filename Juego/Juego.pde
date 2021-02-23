@@ -1,3 +1,10 @@
+import ddf.minim.*;
+import ddf.minim.analysis.*;
+import ddf.minim.effects.*;
+import ddf.minim.signals.*;
+import ddf.minim.spi.*;
+import ddf.minim.ugens.*;
+
 PImage fondo;
 float x=0;
 float y=0;
@@ -10,6 +17,7 @@ float time = 0;
 void setup(){
   size(768,576);
   imagenes();
+  Musica();
   PersLoad();
   pixelFont = createFont("fonts/monogram_extended.ttf",45);
   jugar = new Botones(200,1);

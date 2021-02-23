@@ -27,6 +27,7 @@ PImage Arma2D;
 PImage Arma2I;
 PImage Arma3D;
 PImage Arma3I;
+PImage Alerta;
 void imagenes(){
   //Escenario
   fondo = loadImage("assets/Escenarios/Cielo.png");
@@ -59,6 +60,7 @@ void imagenes(){
   Manito = loadImage("assets/Manito.png");
   opcion = loadImage("assets/Pantallas/Pantalla_opciones.png");
   acerca = loadImage("about/about.png");
+  Alerta = loadImage("assets/Fondo Pantalla.png");
   //Imagenes de Enemigos
   EnLigDer = loadImage("assets/Personaje/EnemigoL.png");
   EnLigIzq = loadImage("assets/Personaje/EnemigoL(-1).png");

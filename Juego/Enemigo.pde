@@ -51,7 +51,7 @@ class enemigo{
     }
   }
   void atakar(){
-    if(MirarD || MirarI){
+    if(MirarD || MirarI && Atacar){
       hostiles.add(new disparo(x,y,MirarD,MirarI));
     }
   }

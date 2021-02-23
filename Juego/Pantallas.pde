@@ -5,6 +5,15 @@ void PantallaIn() {
   opciones.generador();
   fin.generador();
   about.generador();
+  textSize(19);
+  text("Incluido",22*32-12,14*32+12);
+  text("!!Fondo de pantalla¡¡",22*32-12,15*32);
+  image(Alerta,20*32-12,16*32-12,128,64);
+  F();
+  PantallaM.play();
+   Opciones.pause();
+   GamePlay.pause(); 
+   acercaM.pause();
 }
 void GamePlay() {
   
@@ -15,10 +24,30 @@ void GamePlay() {
   Hut();
   bam();
   muerte();
+  PantallaM.pause();
+   Opciones.pause();
+   GamePlay.play(); 
+   acercaM.pause();
 }
 void Opciones() {
   image(opcion, 0, 0);
   volver.generador();
+  PantallaM.pause();
+   Opciones.play();
+   GamePlay.pause(); 
+   acercaM.pause();
+}
+void Fondo(){
+  image(Alerta,0,0,768,432);
+  textSize(25);
+  text("Para tener este Fondo de Pantalla solo tienes que revisar",width/2,432+30);
+  text("La carpeta de juego, y habrá una carpeta llamada",width/2,432+50);
+  text("'Fondo de pantalla' y ahí estará esperandote",width/2,432+70);
+  volver.generador();
+  PantallaM.pause();
+   Opciones.pause();
+   GamePlay.pause(); 
+   acercaM.play();
 }
 //Fin de las funciones
 
@@ -37,7 +66,7 @@ void SwitcScreen() {
       fill(255);
       text("Aun no funciona", mouseX+200, mouseY);
     } 
-  } else if(Pantalla == 2 || Pantalla == 4){
+  } else if(Pantalla == 2 || Pantalla == 4 || Pantalla == 5){
     if (volver.funcion()){
       Pantalla = 0;
     }
@@ -63,7 +92,7 @@ void pantalla() {
     acerca();    
     break;
   case 5:
-    Amuerte();
+    Fondo();
     break;
   }
 }
