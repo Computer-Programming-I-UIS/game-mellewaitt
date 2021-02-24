@@ -8,8 +8,4 @@ void acerca(){
     text(Acerca[i],64,32*(i+1));    
   }
   volver.generador();
-   acercaM.play();
-   PantallaM.pause();
-   Opciones.pause();
-   GamePlay.pause(); 
 }

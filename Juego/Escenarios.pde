@@ -216,6 +216,8 @@ void sala(){
         switch(E1[i][j]){
           case 1:
           image(Cesped,32*j,32*i);
+          cubos[i][j] = new cubo(j,i);
+          cubos[i][j].coX();
           break;
           case 2:
           image(Tierra,32*j,32*i);
@@ -254,6 +256,8 @@ void sala(){
         switch(E2[i][j]){
           case 1:
           image(Cesped,32*j,32*i);
+          cubos[i][j] = new cubo(j,i);
+          cubos[i][j].coX();
           break;
           case 2:
           image(Tierra,32*j,32*i);
@@ -548,9 +552,9 @@ class cubo{
   }
   void coX(){
     if(jugador.PosiP.x >= x && jugador.PosiP.x <= x + ancho){
-     
+      if(jugador.PosiP.y + 32 >= y && jugador.PosiP.y <= y + ancho){
+        jugador.Floor = true;
+      } else {jugador.Floor = false; }
     }
-    stroke(255);
-    line(x,y,x+ancho,y);
   }  
 }
