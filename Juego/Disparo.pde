@@ -77,5 +77,16 @@ void bam(){
     }
   }
   //Fin de la funcion crear balas+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  //Inicio Funcion crear enemigos-------------------------------------------------------------
+  for(int i = torretas.size() - 1; i >= 0; i--){
+    enemigo torreta = torretas.get(i);
+    torreta.gen();
+    if(torreta.salud <= 0){
+      torretas.remove(i);
+    } else if(jugador.Cambio){
+      torretas.clear();
+    }
+  }
+  //Fin funcion Crear enemigos-----------------------------------------------------------------
 }
 //Fin funcion Balas ************************************************************************************************

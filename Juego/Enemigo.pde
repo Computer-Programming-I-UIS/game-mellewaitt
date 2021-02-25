@@ -1,23 +1,33 @@
-enemigo primero;
+ArrayList <enemigo> torretas;
 class enemigo{
   float x;
   float y;
+  float fijo;
   int clase;
   float salud;
   float atk;
   float speed;
+  int dir=-1;
   boolean MirarD = false, MirarI = false,Atacar = false;
   enemigo(float tempx, float tempy, int tempC){
     x=tempx;
     y=tempy;
     clase=tempC;
     speed=4;
+    fijo=tempy;
   }
   void gen(){
     clases();
+    movimiento();
     mirar();
     atakar();
     display();
+
+  }
+  void movimiento(){
+    if(y >= fijo + 16 || y <= fijo - 16){
+      dir=-1*dir;
+    }
   }
   void clases(){
     switch(clase){
@@ -71,6 +81,9 @@ class enemigo{
       if(MirarD){image(EnPesDer,x - 32,y - 32);} 
       else if(MirarI){image(EnPesIzq,x - 32,y - 32);}
       else {image(EnPesIzq,x - 32,y - 32);}
+      break;
+      case 4:
+      image(Torreta,x-16,y-16);
       break;
     }
   }

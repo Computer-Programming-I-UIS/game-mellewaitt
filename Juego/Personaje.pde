@@ -13,7 +13,7 @@ class personajes{
   int seccion;
   int vidas = 4;
   int t = 0;
-  int salas = 1;
+  int salas = 0;
   int h = 64;
   float angle = 0;
   float gravedad = 10;
@@ -36,19 +36,14 @@ class personajes{
     return vidas;
   }
   float Mov(int dir){
-    //Si esta en la sala uno debe haber una restriccion de movimiento
-      //Esta en la sala?
-        //Si
-          //Esta cerca del borde de la izquierda?
-            //Si, entonces nose puede seguir moviendo a la izquierda
-            //No, entonces se puede mover libremente
     switch(salas){
-      case 1:
-        if( Izq == true && PosiP.x <= 10){ } 
+      case 0:
+      if( Izq == true && PosiP.x <= 10){ } 
         else if(Izq || Der){
           PosiP.x += VelP.x*dir;
         }
       break;
+      case 1:
       case 2:
       case 3:
       case 4:
@@ -56,10 +51,8 @@ class personajes{
       case 6:
       case 7:
       case 8:
-      case 9:
       PosiP.x += VelP.x*dir;
-      break;
-      case 10:
+      case 9:      
       if( Der == true && PosiP.x >= width - 10){ } 
       else if(Izq || Der){
           PosiP.x += VelP.x*dir;
@@ -173,7 +166,7 @@ class personajes{
     }
   }
   int Cambiar(){
-    if(PosiP.x >= width && salas != 10){
+    if(PosiP.x >= width && salas != 9){
       salas ++;
       PosiP.x = 10;
       Cambio = true;

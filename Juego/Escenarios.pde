@@ -15,7 +15,7 @@ Los arbustos deben tener dos espacios de ancho.
 9:Arbusto3
 
 */
-int[][] E1 = { 
+  int[][]E1 = { 
   {2,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
   {2,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
   {2,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
@@ -42,7 +42,7 @@ int[][] E2 = {
   {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
   {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
   {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-  {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+  {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0,0,0,0,0,0},
   {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0},
   {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,2,2,1,0,0,0,0,0},
   {0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,2,2,2,2,1,1,0,0,0},
@@ -62,13 +62,13 @@ int[][] E3 = {
   {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,0,0},
   {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,2,2,2,1,1},
   {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,2,2},
-  {0,0,0,0,1,1,1,1,1,1,1,1,0,0,0,0,0,0,3,0,0,2,2,2},
+  {0,0,0,0,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,2,2,2},
   {0,0,0,0,2,2,2,2,2,2,0,0,0,0,0,0,0,0,0,0,0,2,2,2},
   {0,0,0,0,0,2,2,2,0,0,0,0,0,0,0,0,0,0,0,0,0,2,2,2},
   {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,2,2,2},
+  {0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,2,2,2,2,2,2,2,2,2},
   {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,2,2,2,2,2,2,2,2},
-  {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,2,2,2,2,2,2,2,2},
-  {0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,2,2,2},
+  {0,0,0,1,1,1,1,1,1,1,0,1,1,1,1,2,2,2,2,2,2,2,2,2},
   {0,0,1,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2},
   {1,1,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2},
   {2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2}};
@@ -207,332 +207,36 @@ int[][] E3 = {
   {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},
   {2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2},
   {2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2}};
-    
+  int[][][] E ={E1,E2,E3,E4,E5,E6,E7,E8,E9,E10};  
 void sala(){
   for(int i = 0; i < 18; i++){
     for(int j = 0; j < 24; j++){
-      switch(jugador.Cambiar()){
-        case 1:        
-        switch(E1[i][j]){
-          case 1:
-          image(Cesped,32*j,32*i);
-          cubos[i][j] = new cubo(j,i);
-          cubos[i][j].coX();
-          break;
-          case 2:
-          image(Tierra,32*j,32*i);
-          break;
-          case 3:
-          primero.gen();
-          break;
-          case 4:
-          image(Arbol1,32*j,32*i);
-          break;
-          case 5:
-          image(Arbol2,32*j,32*i);
-          break;
-          case 6:
-          image(Arbol3,32*j,32*i);
-          break;
-          case 7:
-          image(Arbusto1,32*j,32*i);
-          break;
-          case 8:
-          image(Arbusto2,32*j,32*i);
-          break;
-          case 9:
-          image(Arbusto3,32*j,32*i);
-          break;
-        }
-        /*
-        if(E1[i][j] == 1){
-          image(Cesped,32*j,32*i);
-        } else if(E1[i][j] == 2){
-          image(Tierra,32*j,32*i);
-        }
-        */
+      println(jugador.Cambiar());
+      switch(E[jugador.salas][i][j]){
+        case 1:
+        image(Cesped,j*32,i*32);
+        cubos[i][j] = new cubo(j,i);
+        cubos[i][j].coX();
         break;
         case 2:
-        switch(E2[i][j]){
-          case 1:
-          image(Cesped,32*j,32*i);
-          cubos[i][j] = new cubo(j,i);
-          cubos[i][j].coX();
-          break;
-          case 2:
-          image(Tierra,32*j,32*i);
-          break;
-          case 3:
-          primero.gen();
-          break;
-          case 4:
-          image(Arbol1,32*j,32*i);
-          break;
-          case 5:
-          image(Arbol2,32*j,32*i);
-          break;
-          case 6:
-          image(Arbol3,32*j,32*i);
-          break;
-          case 7:
-          image(Arbusto1,32*j,32*i);
-          break;
-          case 8:
-          image(Arbusto2,32*j,32*i);
-          break;
-          case 9:
-          image(Arbusto3,32*j,32*i);
-          break;
-        }
+        image(Tierra,j*32,i*32);
         break;
         case 3:
-        switch(E3[i][j]){
-          case 1:
-          image(Cesped,32*j,32*i);
-          break;
-          case 2:
-          image(Tierra,32*j,32*i);
-          break;
-          case 3:
-          primero.gen();
-          break;
-          case 4:
-          image(Arbol1,32*j,32*i);
-          break;
-          case 5:
-          image(Arbol2,32*j,32*i);
-          break;
-          case 6:
-          image(Arbol3,32*j,32*i);
-          break;
-          case 7:
-          image(Arbusto1,32*j,32*i);
-          break;
-          case 8:
-          image(Arbusto2,32*j,32*i);
-          break;
-          case 9:
-          image(Arbusto3,32*j,32*i);
-          break;
-        }
+        torretas.add(new enemigo(j*32+16,i*32,4));
         break;
         case 4:
-        switch(E4[i][j]){
-          case 1:
-          image(Cesped,32*j,32*i);
-          break;
-          case 2:
-          image(Tierra,32*j,32*i);
-          break;
-          case 3:
-          primero.gen();
-          break;
-          case 4:
-          image(Arbol1,32*j,32*i);
-          break;
-          case 5:
-          image(Arbol2,32*j,32*i);
-          break;
-          case 6:
-          image(Arbol3,32*j,32*i);
-          break;
-          case 7:
-          image(Arbusto1,32*j,32*i);
-          break;
-          case 8:
-          image(Arbusto2,32*j,32*i);
-          break;
-          case 9:
-          image(Arbusto3,32*j,32*i);
-          break;
-        }
         break;
-        
         case 5:
-        switch(E5[i][j]){
-          case 1:
-          image(Cesped,32*j,32*i);
-          break;
-          case 2:
-          image(Tierra,32*j,32*i);
-          break;
-          case 3:
-          primero.gen();
-          break;
-          case 4:
-          image(Arbol1,32*j,32*i);
-          break;
-          case 5:
-          image(Arbol2,32*j,32*i);
-          break;
-          case 6:
-          image(Arbol3,32*j,32*i);
-          break;
-          case 7:
-          image(Arbusto1,32*j,32*i);
-          break;
-          case 8:
-          image(Arbusto2,32*j,32*i);
-          break;
-          case 9:
-          image(Arbusto3,32*j,32*i);
-          break;
-        }
         break;
         case 6:
-        switch(E6[i][j]){
-          case 1:
-          image(Cesped,32*j,32*i);
-          break;
-          case 2:
-          image(Tierra,32*j,32*i);
-          break;
-          case 3:
-          primero.gen();
-          break;
-          case 4:
-          image(Arbol1,32*j,32*i);
-          break;
-          case 5:
-          image(Arbol2,32*j,32*i);
-          break;
-          case 6:
-          image(Arbol3,32*j,32*i);
-          break;
-          case 7:
-          image(Arbusto1,32*j,32*i);
-          break;
-          case 8:
-          image(Arbusto2,32*j,32*i);
-          break;
-          case 9:
-          image(Arbusto3,32*j,32*i);
-          break;
-        }
         break;
         case 7:
-        switch(E7[i][j]){
-          case 1:
-          image(Cesped,32*j,32*i);
-          break;
-          case 2:
-          image(Tierra,32*j,32*i);
-          break;
-          case 3:
-          primero.gen();
-          break;
-          case 4:
-          image(Arbol1,32*j,32*i);
-          break;
-          case 5:
-          image(Arbol2,32*j,32*i);
-          break;
-          case 6:
-          image(Arbol3,32*j,32*i);
-          break;
-          case 7:
-          image(Arbusto1,32*j,32*i);
-          break;
-          case 8:
-          image(Arbusto2,32*j,32*i);
-          break;
-          case 9:
-          image(Arbusto3,32*j,32*i);
-          break;
-        }
         break;
         case 8:
-        switch(E8[i][j]){
-          case 1:
-          image(Cesped,32*j,32*i);
-          break;
-          case 2:
-          image(Tierra,32*j,32*i);
-          break;
-          case 3:
-          primero.gen();
-          break;
-          case 4:
-          image(Arbol1,32*j,32*i);
-          break;
-          case 5:
-          image(Arbol2,32*j,32*i);
-          break;
-          case 6:
-          image(Arbol3,32*j,32*i);
-          break;
-          case 7:
-          image(Arbusto1,32*j,32*i);
-          break;
-          case 8:
-          image(Arbusto2,32*j,32*i);
-          break;
-          case 9:
-          image(Arbusto3,32*j,32*i);
-          break;
-        }
         break;
         case 9:
-        switch(E9[i][j]){
-          case 1:
-          image(Cesped,32*j,32*i);
-          break;
-          case 2:
-          image(Tierra,32*j,32*i);
-          break;
-          case 3:
-          primero.gen();
-          break;
-          case 4:
-          image(Arbol1,32*j,32*i);
-          break;
-          case 5:
-          image(Arbol2,32*j,32*i);
-          break;
-          case 6:
-          image(Arbol3,32*j,32*i);
-          break;
-          case 7:
-          image(Arbusto1,32*j,32*i);
-          break;
-          case 8:
-          image(Arbusto2,32*j,32*i);
-          break;
-          case 9:
-          image(Arbusto3,32*j,32*i);
-          break;
-        }
         break;
         case 10:
-        switch(E2[i][j]){
-          case 1:
-          image(Cesped,32*j,32*i);
-          break;
-          case 2:
-          image(Tierra,32*j,32*i);
-          break;
-          case 3:
-          primero.gen();
-          break;
-          case 4:
-          image(Arbol1,32*j,32*i);
-          break;
-          case 5:
-          image(Arbol2,32*j,32*i);
-          break;
-          case 6:
-          image(Arbol3,32*j,32*i);
-          break;
-          case 7:
-          image(Arbusto1,32*j,32*i);
-          break;
-          case 8:
-          image(Arbusto2,32*j,32*i);
-          break;
-          case 9:
-          image(Arbusto3,32*j,32*i);
-          break;
-        }
         break;
        
       }
@@ -540,7 +244,6 @@ void sala(){
   }
 }
 cubo[][] cubos = new cubo[18][24];
-
 class cubo{
   float x;
   float y;

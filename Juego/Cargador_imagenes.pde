@@ -15,6 +15,7 @@ PImage EnNorDer;
 PImage EnNorIzq;
 PImage EnPesDer;
 PImage EnPesIzq;
+PImage Torreta;
 PImage Arbusto1;
 PImage Arbusto2;
 PImage Arbusto3;
@@ -28,6 +29,7 @@ PImage Arma2I;
 PImage Arma3D;
 PImage Arma3I;
 PImage Alerta;
+PImage Antena;
 void imagenes(){
   //Escenario
   fondo = loadImage("assets/Escenarios/Cielo.png");
@@ -68,4 +70,6 @@ void imagenes(){
   EnNorIzq = loadImage("assets/Personaje/EnemigoN(-1).png");
   EnPesDer = loadImage("assets/Personaje/EnemigoP.png");
   EnPesIzq = loadImage("assets/Personaje/EnemigoP(-1).png");
+  Torreta = loadImage("assets/Personaje/Torreta.png");
+  Antena = loadImage("assets/Personaje/Poste.png");
 }

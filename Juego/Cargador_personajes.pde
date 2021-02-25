@@ -1,7 +1,6 @@
 ArrayList<enemigo> enemigos;
 void PersLoad(){
   jugador = new personajes(width/2,height/2+32,1);
-  primero = new enemigo(500,height/2+32,2);
   enemigos = new ArrayList<enemigo>();
 }
 void Creador(){

@@ -32,6 +32,7 @@ void setup(){
   }
   balas = new ArrayList< disparo>(1);
   hostiles = new ArrayList<disparo>(5);
+  torretas = new ArrayList<enemigo>();
 }
 void stop(){
 }
