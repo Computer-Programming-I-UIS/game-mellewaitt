@@ -44,7 +44,7 @@ class personajes{
             //No, entonces se puede mover libremente
     switch(salas){
       case 1:
-        if( Izq == true && PosiP.x <= 10){ } 
+        if( Izq == true && PosiP.x <= 80){ } 
         else if(Izq || Der){
           PosiP.x += VelP.x*dir;
         }
