@@ -38,7 +38,7 @@ class personajes{
   float Mov(int dir){
     switch(salas){
       case 0:
-      if( Izq == true && PosiP.x <= 10){ } 
+        if( Izq == true && PosiP.x <= 80){ } 
         else if(Izq || Der){
           PosiP.x += VelP.x*dir;
         }
