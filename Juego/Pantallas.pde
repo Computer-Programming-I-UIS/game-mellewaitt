@@ -6,6 +6,7 @@ void PantallaIn() {
   fin.generador();
   about.generador();
   textSize(30);
+  image(Esrb,32,14*32,64,96);
   text("Tutorial", 22*32-12,220);
   image(ptutorial,20*32-12, 8*32-12, 128, 64);
   text("Historia", 22*32-12, 11*32);
