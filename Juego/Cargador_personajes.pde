@@ -18,15 +18,15 @@ void Creador() {
   }
 }
 void muerte() {
-  if (jugador.vidas <= 0) {
-    Pantalla = 0;
+  if(jugador.vidas <= 0){
+    Pantalla = 8;
     jugador.salas = 0;
-    jugador.vidas = 4;
     jugador.PosiP.x = width/2;
     jugador.PosiP.y = height/2+32;
     for (int i = 0; i < hostiles.size(); i++) {
       hostiles.clear();
       balas.clear();
     }
+    jugador.vidas = 4;
   }
 }

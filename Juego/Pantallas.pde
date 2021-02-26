@@ -6,52 +6,61 @@ void PantallaIn() {
   fin.generador();
   about.generador();
   textSize(30);
-  text("Historia",22*32-12,11*32);
-  image(Cinematica3,20*32-12,12*32-12,128,64);
+  text("Tutorial", 22*32-12,220);
+  image(ptutorial,20*32-12, 8*32-12, 128, 64);
+  text("Historia", 22*32-12, 11*32);
+  image(Cinematica3, 20*32-12, 12*32-12, 128, 64);
   textSize(22);
-  text("Incluido",22*32-12,14*32+12);
-  text("!!Fondo de pantalla¡¡",22*32-12,15*32);
-  image(Alerta,20*32-12,16*32-12,128,64);
+  text("Incluido", 22*32-12, 14*32+12);
+  text("!!Fondo de pantalla¡¡", 22*32-12, 15*32);
+  image(Alerta, 20*32-12, 16*32-12, 128, 64);
   F();
   PantallaM.play();
-   Opciones.pause();
-   GamePlay.pause(); 
-   acercaM.pause();
+  Opciones.pause();
+  GamePlay.pause(); 
+  acercaM.pause();
+}
+void Pausa() {
+  image(fondo, 0, 0);
+  image(Ft, 0, 0);
+  sala();  
+  Hut();
+  jugador.display();
 }
 
 void GamePlay() {
-  
-  image(fondo, x, 0);
-  image(Ft, 0, 0);  
+
+  image(fondo, 0, 0);
+  image(Ft, 0, 0);
   jugador.generator();
+  muerte();
   sala();  
   Hut();
-  bam();
-  muerte();
+  bam();  
   PantallaM.pause();
-   Opciones.pause();
-   GamePlay.play(); 
-   acercaM.pause();
+  Opciones.pause();
+  GamePlay.play(); 
+  acercaM.pause();
 }
 void Opciones() {
   image(opcion, 0, 0);
   volver.generador();
   PantallaM.pause();
-   Opciones.play();
-   GamePlay.pause(); 
-   acercaM.pause();
+  Opciones.play();
+  GamePlay.pause(); 
+  acercaM.pause();
 }
-void Fondo(){
-  image(Alerta,0,0,768,432);
+void Fondo() {
+  image(Alerta, 0, 0, 768, 432);
   textSize(25);
-  text("Para tener este Fondo de Pantalla solo tienes que revisar",width/2,432+30);
-  text("La carpeta de juego, y habrá una carpeta llamada",width/2,432+50);
-  text("'Fondo de pantalla' y ahí estará esperandote",width/2,432+70);
+  text("Para tener este Fondo de Pantalla solo tienes que revisar", width/2, 432+30);
+  text("La carpeta de juego, y habrá una carpeta llamada", width/2, 432+50);
+  text("'Fondo de pantalla' y ahí estará esperandote", width/2, 432+70);
   volver.generador();
   PantallaM.pause();
-   Opciones.pause();
-   GamePlay.pause(); 
-   acercaM.play();
+  Opciones.pause();
+  GamePlay.pause(); 
+  acercaM.play();
 }
 //Fin de las funciones
 
@@ -62,7 +71,7 @@ void SwitcScreen() {
       Pantalla = 1;
     } else if (opciones.funcion()) {
       Pantalla = 2;
-    } else if (about.funcion()){
+    } else if (about.funcion()) {
       Pantalla = 4;
     } else if (fin.funcion()) {
       image(Manito, mouseX-40, mouseY + 10);
@@ -70,12 +79,11 @@ void SwitcScreen() {
       fill(255);
       text("Aun no funciona", mouseX+200, mouseY);
     }
-    
-  } else if(Pantalla == 2 || Pantalla == 4 || Pantalla == 5 || Pantalla == 6){
-    if (volver.funcion()){
+  } else if (Pantalla == 2 || Pantalla == 4 || Pantalla == 5 || Pantalla == 6 || Pantalla == 7) {
+    if (volver.funcion()) {
       Pantalla = 0;
     }
-  }  
+  }
 }
 //Fin de la funcion
 
@@ -91,7 +99,8 @@ void pantalla() {
   case 2://Pantalla de opciones
     Opciones();
     break;
-  case 3://Pantalla de pause      
+  case 3://Pantalla de pause  
+    Pausa();
     break;    
   case 4://Pantalla acerca
     acerca();    
@@ -101,6 +110,12 @@ void pantalla() {
     break;
   case 6:
     historia();
-  break;
+    break;
+  case 7:
+    tutorial();
+    break;
+    case 8://Murido
+    murido();
+    break;
   }
 }

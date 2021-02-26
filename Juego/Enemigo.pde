@@ -15,36 +15,16 @@ class enemigo{
     clase=tempC;
     speed=4;
     fijo=tempy;
+    salud=clase;
   }
   void gen(){
-    clases();
-    movimiento();
     mirar();
     atakar();
     display();
+    muerte();
 
   }
-  void movimiento(){
-    if(y >= fijo + 16 || y <= fijo - 16){
-      dir=-1*dir;
-    }
-  }
-  void clases(){
-    switch(clase){
-      case 1://clase ligera
-        salud=1;
-        atk=1;
-      break;
-      case 2://clase normal
-        salud=3;
-        atk=1;
-      break;
-      case 3://clase pesada
-        salud=6;
-        atk=2;
-      break;
-    }
-  }
+  
   void mirar(){
     if(jugador.PosiP.y >= y - 12 && jugador.PosiP.y <= y +12){
       if(jugador.PosiP.x >= x - 200 && jugador.PosiP.x <x){
@@ -85,6 +65,16 @@ class enemigo{
       case 4:
       image(Torreta,x-16,y-16);
       break;
+    }
+  }
+  void muerte(){
+    for(int i = balas.size() - 1; i >= 0; i--){
+    disparo bala = balas.get(i);
+    bala.gen();
+      if(bala.Posi.x >= x - 16 && bala.Posi.x <= x + 16 && bala.Posi.y <= y + 16 && bala.Posi.y >= y - 16){
+        salud --;
+        balas.remove(i);
+      } 
     }
   }
 }

@@ -83,6 +83,22 @@ void keyReleased(){
   if(key == 'e' || key == 'E'){
     H++;
   }
+  if(key == 'p' || key == 'P'){
+  switch(Pantalla){
+    case 1:
+    Pantalla =3;
+    break;
+    case 3:
+    Pantalla =1;
+    break;
+    }
+  }
+  if(key == 'r' || key == 'R' && Pantalla == 8){
+    Pantalla = 1;
+  }
+  if(key == 'm' || key == 'M' && Pantalla == 8){
+    Pantalla = 0;
+  }
 }
 Botones jugar;
 Botones opciones;
@@ -107,7 +123,8 @@ class Botones {
     switch(i) {
     case 0:
       textFont(pixelFont);
-      fill(0, 255, 232);
+      if(Pantalla == 7){fill(0);}
+      else{fill(0, 255, 232);}
       textSize(46);
       textAlign(CENTER, CENTER);
       text("Volver", x, y);
@@ -157,5 +174,7 @@ void F(){
     Pantalla = 5;
   } else if(mouseX >= 20*32-12 && mouseX <= 20*32-12 +128 && mouseY <= 12*32-12+64 && mouseY >= 12*32-12 && mouseButton == LEFT){
     Pantalla = 6;
+  } else if(mouseX >= 20*32-12 && mouseX <= 20*32-12 +128 && mouseY <= 8*32-12+64 && mouseY >= 8*32-12 && mouseButton == LEFT){
+    Pantalla = 7;
   }
 }

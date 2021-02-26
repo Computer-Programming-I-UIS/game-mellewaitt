@@ -1,19 +1,18 @@
 import ddf.minim.*;
 PImage fondo;
-float x=0;
-float y=0;
 int Sala = 1;
 PFont pixelFont,IAFont;
 int Pantalla = 0;
 Boolean Pause = false; 
 float time = 0;
 int H = 1;
+int T = 0;
 
 void setup() {
   size(768, 576);
   imagenes();
   Musica();
-  PersLoad();
+  PersLoad();  
   pixelFont = createFont("fonts/monogram_extended.ttf", 45);
   IAFont = createFont("fonts/ComputadoraFont.ttf",45);
   jugar = new Botones(200, 1);
@@ -29,6 +28,7 @@ void setup() {
   balas = new ArrayList< disparo>(1);
   hostiles = new ArrayList<disparo>(5);
   torretas = new ArrayList<enemigo>();
+  PreEn();
 }
 void stop() {
 }

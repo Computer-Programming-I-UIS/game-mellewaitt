@@ -227,7 +227,6 @@ void sala(){
         jugador.Floor = didFloor;
         break;
         case 3:
-        torretas.add(new enemigo(j*32+16,i*32,4));
         break;
         case 4:
         break;
@@ -246,6 +245,17 @@ void sala(){
         case 9:
         image(Arbusto3,32*j,32*i);
         break;       
+      }
+    }
+  }
+}
+void PreEn(){
+  for(int i = 0; i < 18; i++){
+    for(int j = 0; j < 24; j++){
+      println(jugador.Cambiar());
+      switch(E[jugador.salas][i][j]){        
+        case 3:
+        torretas.add(new enemigo(j*32+16,i*32,4));             
       }
     }
   }

@@ -13,10 +13,14 @@ void acerca(){
    GamePlay.pause(); 
    acercaM.play();
 }
-void historia(){
+void historia(){  
   switch(H){
     case 1:
     image(Cinematica2,0,0,768,432);
+    fill(255);
+    textAlign(0);
+    textSize(30);
+    text("Presiona e para avanzar",0,12);
     String[] Historia1 = loadStrings("assets/Cinematica/Pantalla 1.txt");
     for(int i = 0; i < Historia1.length; i++){
     fill(255);
@@ -27,6 +31,10 @@ void historia(){
     break;
     case 2:
     image(Cinematica1,0,0,768,432);
+    fill(255);
+    textAlign(0);
+    textSize(30);
+    text("Presiona e para avanzar",0,12);
     String[] Historia2 = loadStrings("assets/Cinematica/Pantalla 2.txt");
     for(int i = 0; i < Historia2.length; i++){
     fill(255);
@@ -37,6 +45,10 @@ void historia(){
     break;
     case 3:
     image(Cinematica3,0,0,768,432);
+    fill(255);
+    textAlign(0);
+    textSize(30);
+    text("Presiona e para avanzar",0,12);
     String[] Historia3 = loadStrings("assets/Cinematica/Pantalla 3.txt");
     for(int i = 0; i < Historia3.length; i++){
     fill(255);
@@ -47,6 +59,10 @@ void historia(){
     break;
     case 4:
     image(Cinematica3,0,0,768,432);
+    fill(255);
+    textAlign(0);
+    textSize(30);
+    text("Presiona e para avanzar",0,12);
     String[] Historia4 = loadStrings("assets/Cinematica/Pantalla 4.txt");
     for(int i = 0; i < Historia4.length; i++){
     fill(255);
@@ -57,6 +73,10 @@ void historia(){
     break;
     case 5:
     image(Cinematica3,0,0,768,432);
+    fill(255);
+    textAlign(0);
+    textSize(30);
+    text("Presiona e para avanzar",0,12);
     fill(#FF0303);
     textAlign(0);
     textSize(50);
@@ -67,6 +87,10 @@ void historia(){
     break;
     case 6:
     image(Cinematica3,0,0,768,432);
+    fill(255);
+    textAlign(0);
+    textSize(30);
+    text("Presiona e para avanzar",0,12);
     fill(#03DBFF);
     textAlign(0);
     textSize(100);
@@ -81,5 +105,14 @@ void historia(){
    Opciones.pause();
    GamePlay.pause(); 
    acercaM.play();
+  volver.generador();
+}
+void tutorial(){
+  image(tutorial,0,0);
+  volver.generador();
+  PantallaM.pause();
+  Opciones.pause();
+  GamePlay.pause(); 
+  acercaM.play();   
   volver.generador();
 }

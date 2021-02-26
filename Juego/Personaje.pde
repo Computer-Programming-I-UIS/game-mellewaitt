@@ -11,7 +11,7 @@ class personajes{
   float y;
   float z;
   int seccion;
-  int vidas = 100;
+  int vidas = 4;
   int t = 0;
   int salas = 0;
   int h = 64;
