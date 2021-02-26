@@ -31,7 +31,7 @@ PImage Arma3I;
 PImage Alerta;
 PImage Antena;
 PImage Cinematica1,Cinematica2,Cinematica3,tutorial;
-PImage muerte,ptutorial;
+PImage muerte,ptutorial,Esrb;
 void imagenes(){
   //Escenario
   fondo = loadImage("assets/Escenarios/Cielo.png");
@@ -70,6 +70,7 @@ void imagenes(){
   Cinematica3 = loadImage("assets/Cinematica/Cinematica 3.png");
   tutorial = loadImage("assets/Cinematica/Tutorial.png");
   ptutorial = loadImage("assets/Cinematica/Ptutorial.png");
+  Esrb = loadImage("assets/Pantallas/Esrb.png");
   //Imagenes de Enemigos
   EnLigDer = loadImage("assets/Personaje/EnemigoL.png");
   EnLigIzq = loadImage("assets/Personaje/EnemigoL(-1).png");
