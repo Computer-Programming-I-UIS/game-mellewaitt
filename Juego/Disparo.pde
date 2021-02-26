@@ -85,7 +85,7 @@ void bam(){
       torretas.remove(i);
     } else if(jugador.Cambio){
       torretas.clear();
-    }
+    }   
   }
   //Fin funcion Crear enemigos-----------------------------------------------------------------
 }

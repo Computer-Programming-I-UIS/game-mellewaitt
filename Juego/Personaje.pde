@@ -11,7 +11,7 @@ class personajes{
   float y;
   float z;
   int seccion;
-  int vidas = 4;
+  int vidas = 50;
   int t = 0;
   int salas = 0;
   int h = 64;
@@ -44,22 +44,79 @@ class personajes{
         }
       break;
       case 1:
-      case 2:
-      case 3:
-      case 4:
-      case 5:  
-      case 6:
-      case 7:
-      case 8:
-      PosiP.x += VelP.x*dir;
-      case 9:      
+      
       if( Der == true && PosiP.x >= width - 10){ } 
       else if(Izq || Der){
           PosiP.x += VelP.x*dir;
           break;
         }
-      break;
+      case 2:
+      
+      if( Der == true && PosiP.x >= width - 10){ } 
+      else if(Izq || Der){
+          PosiP.x += VelP.x*dir;
+          break;
+        }
+      case 3:
+      
+      if( Der == true && PosiP.x >= width - 10){ } 
+      else if(Izq || Der){
+          PosiP.x += VelP.x*dir;
+          break;
+        }
+      case 4:
+      
+      if( Der == true && PosiP.x >= width - 10){ } 
+      else if(Izq || Der){
+          PosiP.x += VelP.x*dir;
+          break;
+        }
+      case 5:
+      
+      if( Der == true && PosiP.x >= width - 10){ } 
+      else if(Izq || Der){
+          PosiP.x += VelP.x*dir;
+          break;
+        }
+      case 6:
+      
+      if( Der == true && PosiP.x >= width - 10){ } 
+      else if(Izq || Der){
+          PosiP.x += VelP.x*dir;
+          break;
+        }
+      case 7:
+      
+      if( Der == true && PosiP.x >= width - 10){ } 
+      else if(Izq || Der){
+          PosiP.x += VelP.x*dir;
+          break;
+        }
+      case 8:
+      
+      PosiP.x += VelP.x*dir;
+      if( Der == true && PosiP.x >= width - 10){ } 
+      else if(Izq || Der){
+          PosiP.x += VelP.x*dir;
+          break;
+        }
+      case 9:      
+      
+      if( Der == true && PosiP.x >= width - 10){ } 
+      else if(Izq || Der){
+          PosiP.x += VelP.x*dir;
+          break;
+        }
+      case 10:      
+      PreEn();
+      if( Der == true && PosiP.x >= width - 10){ } 
+      else if(Izq || Der){
+          PosiP.x += VelP.x*dir;
+          break;
+        }
+        
     }
+    
     return PosiP.x;
   }
   void arma(){
@@ -171,10 +228,14 @@ class personajes{
       salas ++;
       PosiP.x = 10;
       Cambio = true;
+      torretas.clear();
+      hostiles.clear();
     } else if(PosiP.x <= 0 && salas != 0){
       salas --;
       PosiP.x = width - 10;
       Cambio = true;
+      torretas.clear();
+      hostiles.clear();
     } else { 
       Cambio = false;
     }

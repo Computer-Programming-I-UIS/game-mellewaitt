@@ -36,6 +36,8 @@ class enemigo{
         MirarI = false;
       }
       Atacar=true;
+    }else if(jugador.vidas <= 0){
+      Atacar=false;
     } else {
       Atacar=false;
     }

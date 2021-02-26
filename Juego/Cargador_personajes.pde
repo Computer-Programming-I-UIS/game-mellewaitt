@@ -18,7 +18,7 @@ void Creador() {
   }
 }
 void muerte() {
-  if(jugador.vidas <= 0){
+  if(jugador.vidas <= 0){    
     Pantalla = 8;
     jugador.salas = 0;
     jugador.PosiP.x = width/2;
@@ -26,6 +26,7 @@ void muerte() {
     for (int i = 0; i < hostiles.size(); i++) {
       hostiles.clear();
       balas.clear();
+      torretas.clear();
     }
     jugador.vidas = 4;
   }
