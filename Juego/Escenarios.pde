@@ -208,19 +208,23 @@ int[][] E3 = {
   {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},
   {2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2},
   {2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2}};
-  int[][][] E ={E1,E2,E3,E4,E5,E6,E7,E8,E9,E10};  
+  int[][][] E ={E1,E2,E3,E4,E5,E6,E7,E8,E9,E10};
+  
 void sala(){
+  boolean didFloor = false;
   for(int i = 0; i < 18; i++){
     for(int j = 0; j < 24; j++){
       println(jugador.Cambiar());
       switch(E[jugador.salas][i][j]){
         case 1:
         image(Cesped,j*32,i*32);
-        cubos[i][j] = new cubo(j,i);
-        cubos[i][j].coX();
+        didFloor = didFloor | cubos[i][j].coX();
+        jugador.Floor = didFloor;
         break;
         case 2:
         image(Tierra,j*32,i*32);
+        didFloor = didFloor | cubos[i][j].coX();
+        jugador.Floor = didFloor;
         break;
         case 3:
         torretas.add(new enemigo(j*32+16,i*32,4));
@@ -256,11 +260,13 @@ class cubo{
     x=tempx*32;
     y=tempy*32;
   }
-  void coX(){
+  boolean coX(){
+    boolean floor = false;
     if(jugador.PosiP.x >= x && jugador.PosiP.x <= x + ancho){
       if(jugador.PosiP.y + 32 >= y && jugador.PosiP.y <= y + ancho){
-        jugador.Floor = true;
-      } else {jugador.Floor = false; }
+        floor = true;
+      } 
     }
-  }  
+    return floor;
+  }
 }

@@ -170,7 +170,7 @@ class personajes{
       salas ++;
       PosiP.x = 10;
       Cambio = true;
-    } else if(PosiP.x <= 0 && salas != 1){
+    } else if(PosiP.x <= 0 && salas != 0){
       salas --;
       PosiP.x = width - 10;
       Cambio = true;

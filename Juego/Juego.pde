@@ -3,7 +3,7 @@ PImage fondo;
 float x=0;
 float y=0;
 int Sala = 1;
-PFont pixelFont;
+PFont pixelFont,IAFont;
 int Pantalla = 0;
 Boolean Pause = false; 
 float time = 0;
@@ -15,6 +15,7 @@ void setup() {
   Musica();
   PersLoad();
   pixelFont = createFont("fonts/monogram_extended.ttf", 45);
+  IAFont = createFont("fonts/ComputadoraFont.ttf",45);
   jugar = new Botones(200, 1);
   opciones = new Botones(250, 2);
   fin = new Botones(480, 3);
@@ -22,7 +23,7 @@ void setup() {
   volver = new Botones(340, 0);
   for (int i = 0; i < 18; i++) {
     for (int j =0; j < 24; j++) {
-      cubos[i][j] = new cubo(0, 0);
+      cubos[i][j] = new cubo(j, i);
     }
   }
   balas = new ArrayList< disparo>(1);
