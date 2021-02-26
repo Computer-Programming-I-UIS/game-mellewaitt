@@ -76,7 +76,12 @@ void keyReleased(){
         }
       
     break;
+ 
     }
+    
+  }
+  if(key == 'e' || key == 'E'){
+    H++;
   }
 }
 Botones jugar;
@@ -150,5 +155,7 @@ class Botones {
 void F(){
   if(mouseX >= 20*32-12 && mouseX <= 20*32-12 +128 && mouseY <= 16*32-12+64 && mouseY >= 16*32-12 && mouseButton == LEFT){
     Pantalla = 5;
+  } else if(mouseX >= 20*32-12 && mouseX <= 20*32-12 +128 && mouseY <= 12*32-12+64 && mouseY >= 12*32-12 && mouseButton == LEFT){
+    Pantalla = 6;
   }
 }

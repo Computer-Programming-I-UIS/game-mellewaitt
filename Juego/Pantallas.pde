@@ -5,7 +5,10 @@ void PantallaIn() {
   opciones.generador();
   fin.generador();
   about.generador();
-  textSize(19);
+  textSize(30);
+  text("Historia",22*32-12,11*32);
+  image(Cinematica3,20*32-12,12*32-12,128,64);
+  textSize(22);
   text("Incluido",22*32-12,14*32+12);
   text("!!Fondo de pantalla¡¡",22*32-12,15*32);
   image(Alerta,20*32-12,16*32-12,128,64);
@@ -15,6 +18,7 @@ void PantallaIn() {
    GamePlay.pause(); 
    acercaM.pause();
 }
+
 void GamePlay() {
   
   image(fondo, x, 0);
@@ -65,8 +69,9 @@ void SwitcScreen() {
       textFont(pixelFont);
       fill(255);
       text("Aun no funciona", mouseX+200, mouseY);
-    } 
-  } else if(Pantalla == 2 || Pantalla == 4 || Pantalla == 5){
+    }
+    
+  } else if(Pantalla == 2 || Pantalla == 4 || Pantalla == 5 || Pantalla == 6){
     if (volver.funcion()){
       Pantalla = 0;
     }
@@ -94,5 +99,8 @@ void pantalla() {
   case 5:
     Fondo();
     break;
+  case 6:
+    historia();
+  break;
   }
 }

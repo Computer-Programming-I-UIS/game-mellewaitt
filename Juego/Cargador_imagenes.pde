@@ -30,6 +30,7 @@ PImage Arma3D;
 PImage Arma3I;
 PImage Alerta;
 PImage Antena;
+PImage Cinematica1,Cinematica2,Cinematica3;
 void imagenes(){
   //Escenario
   fondo = loadImage("assets/Escenarios/Cielo.png");
@@ -63,6 +64,9 @@ void imagenes(){
   opcion = loadImage("assets/Pantallas/Pantalla_opciones.png");
   acerca = loadImage("about/about.png");
   Alerta = loadImage("assets/Fondo Pantalla.png");
+  Cinematica1 = loadImage("assets/Cinematica/Cinematica 1.png");
+  Cinematica2 = loadImage("assets/Cinematica/Cinematica 2.png");
+  Cinematica3 = loadImage("assets/Cinematica/Cinematica 3.png");
   //Imagenes de Enemigos
   EnLigDer = loadImage("assets/Personaje/EnemigoL.png");
   EnLigIzq = loadImage("assets/Personaje/EnemigoL(-1).png");
