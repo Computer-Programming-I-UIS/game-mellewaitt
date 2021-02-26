@@ -57,12 +57,22 @@ void historia(){
     break;
     case 5:
     image(Cinematica3,0,0,768,432);
-    fill(255);
+    fill(#FF0303);
     textAlign(0);
+    textSize(50);
+    text("Fuimos Diezmados...",32,510);
+    fill(255);
     textSize(30);
-    text("Fuimos diesmados",32,450);
+    text("Alejado de todo y abondanado, sin dejar de pensar en la muerte." ,32,550);
     break;
     case 6:
+    image(Cinematica3,0,0,768,432);
+    fill(#03DBFF);
+    textAlign(0);
+    textSize(100);
+    text("HAY QUE SEGUIR.",110,525);
+    break;
+    case 7:
     Pantalla = 0;
     H=1;
     break;

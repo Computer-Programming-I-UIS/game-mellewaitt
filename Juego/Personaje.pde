@@ -11,7 +11,7 @@ class personajes{
   float y;
   float z;
   int seccion;
-  int vidas = 4;
+  int vidas = 100;
   int t = 0;
   int salas = 0;
   int h = 64;
@@ -56,6 +56,7 @@ class personajes{
       if( Der == true && PosiP.x >= width - 10){ } 
       else if(Izq || Der){
           PosiP.x += VelP.x*dir;
+          break;
         }
       break;
     }

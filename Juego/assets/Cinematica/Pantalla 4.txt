@@ -3,5 +3,4 @@
 ...Despliegue:
  	Doseavo peloton de infanteria Hercules.
 ...Misíon:
-	Proteccion de centro de almacenamiento de 
-	Malewiatta.
+	Proteccion de centro de almacenamiento de Malewiatta.
