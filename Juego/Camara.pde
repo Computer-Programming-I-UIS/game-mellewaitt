@@ -1,16 +1,5 @@
 //Este apartado es para cuando el personaje este en ciertos sitios la camara se comporte de una o otra manera
 PImage Hui,Pi;
-class camara{
-  float x;
-  float y;
-  float T;
-  
-  void primario(){
-  }
-  void movimiento(){
-  }
-  
-}
 void Hut(){
     image(Hui,0,0);
       image(Pi, 5,5);

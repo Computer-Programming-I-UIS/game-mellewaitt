@@ -10,6 +10,7 @@ int T = 0;
 
 void setup() {
   size(768, 576);
+  frameRate(30);
   imagenes();
   Musica();
   PersLoad();  
@@ -35,7 +36,6 @@ void stop() {
 void draw() {
   background(0);
   surface.setTitle("Mallewaitt");
-
   pantalla();
   SwitcScreen();
 }

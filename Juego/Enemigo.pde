@@ -72,7 +72,6 @@ class enemigo{
   void muerte(){
     for(int i = balas.size() - 1; i >= 0; i--){
     disparo bala = balas.get(i);
-    bala.gen();
       if(bala.Posi.x >= x - 16 && bala.Posi.x <= x + 16 && bala.Posi.y <= y + 16 && bala.Posi.y >= y - 16){
         salud --;
         balas.remove(i);
