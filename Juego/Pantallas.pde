@@ -31,7 +31,7 @@ void Pausa() {
 
 void GamePlay() {
 
-  image(fondo, 0, 0);
+  background(0);
   image(Ft, 0, 0);
   jugador.generator();
   muerte();
